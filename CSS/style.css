@@ -1,0 +1,160 @@
+/* Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at center, #0a4ed6, #001c54);
+    overflow: hidden;
+}
+
+/* Floating Glowing Cubes */
+.hero {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.cube {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    animation: floatCubes 6s infinite ease-in-out;
+}
+
+@keyframes floatCubes {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    50% { transform: translateY(-150px) rotate(180deg); opacity: 0.5; }
+    100% { transform: translateY(0) rotate(360deg); opacity: 1; }
+}
+
+/* Multiple Cube Animations */
+.cube:nth-child(1) { left: 8vw; top: 85vh; animation-duration: 6s; }
+.cube:nth-child(2) { left: 25vw; top: 25vh; animation-duration: 9s; }
+.cube:nth-child(3) { left: 45vw; top: 65vh; animation-duration: 7s; }
+.cube:nth-child(4) { left: 68vw; top: 10vh; animation-duration: 11s; }
+.cube:nth-child(5) { left: 88vw; top: 50vh; animation-duration: 8s; }
+.cube:nth-child(6) { left: 15vw; top: 40vh; animation-duration: 10s; }
+.cube:nth-child(7) { left: 75vw; top: 75vh; animation-duration: 6s; }
+
+/* Main Container */
+.container {
+    
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 25px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: 0.4s ease-in-out;
+}
+
+/* Glow Effect on Hover */
+.container:hover {
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.4);
+    transform: scale(1.02);
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Input Field */
+input {
+    width: 90%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Focus Effect */
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons with Neon Effect */
+button {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(45deg, #1f75fe, #0283d8);
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+    transition: 0.4s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(31, 117, 254, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hover Effect */
+button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, #0283d8, #0a4ed6);
+    box-shadow: 0 10px 30px rgba(31, 117, 254, 0.9);
+}
+
+/* Active (Click) Effect */
+button:active {
+    transform: scale(0.97);
+}
+
+/* Smooth Floating Effect */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Neon Border Animation */
+@keyframes neonBorder {
+    0% { box-shadow: 0 0 10px rgba(31, 117, 254, 0.6); }
+    50% { box-shadow: 0 0 20px rgba(31, 117, 254, 0.9); }
+    100% { box-shadow: 0 0 10px rgba(31, 117, 254, 0.6); }
+}
+
+/* Apply Floating Effect */
+.container, button {
+    animation: float 5s infinite ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding:10%;
+    }
+
+    button {
+        font-size: 16px;
+        height: 45px;
+    }
+}
