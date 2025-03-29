@@ -1,7 +1,9 @@
 # QR Code Generator & Scanner
 
 Welcome to the **QR Code Generator & Scanner** repository! This project provides a seamless experience for generating QR codes from text or URLs and scanning them using a webcam or image upload.
-![Image](https://github.com/user-attachments/assets/c5b29600-5faf-4b2c-baf8-4c0ba6a700e2)
+![Image](https://github.com/user-attachments/assets/23d629bd-6960-4256-898e-52d0f4a5c451)
+
+![Image](https://github.com/user-attachments/assets/bcbf0a24-a1f2-4eb1-9387-c6f33fd3ca22)
 
 ## 📜 Table of Contents
 - [Introduction](#introduction)
